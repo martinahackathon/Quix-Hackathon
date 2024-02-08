@@ -43,11 +43,11 @@ def read_csv_file(file_path: str):
     df['Timestamp'] = pd.to_datetime(df['Timestamp'])
     df['Timestamp'] = (df['Timestamp'].astype('int64')) // 10**9
     df['temperature_max'] = df['temperature_max'].apply(float)
-    df['temperature_min'] = df['temperature_min'].apply(float)
-    df['uv_index_max'] = df['uv_index_max'].apply(float)
-    df['precipitation_sum'] = df['precipitation_sum'].apply(float)
-    df['precipitation_hours'] = df['precipitation_hours'].apply(float)
-    df['wind_speed_max'] = df['wind_speed_max'].apply(float)
+    #df['temperature_min'] = df['temperature_min'].apply(float)
+    #df['uv_index_max'] = df['uv_index_max'].apply(float)
+    #df['precipitation_sum'] = df['precipitation_sum'].apply(float)
+    #df['precipitation_hours'] = df['precipitation_hours'].apply(float)
+    #df['wind_speed_max'] = df['wind_speed_max'].apply(float)
     print(df)
     # Get the number of rows in the dataFrame for printing out later
     row_count = len(df)
