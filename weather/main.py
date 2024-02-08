@@ -42,6 +42,7 @@ def read_csv_file(file_path: str):
     df = df.rename(columns={'time': 'Timestamp'})
     df['Timestamp'] = pd.to_datetime(df['Timestamp'])
     df['Timestamp'] = (df['Timestamp'].astype('int64')) // 10**9
+    df = df.drop(columns='Timestamp')
     df['temperature_max'] = df['temperature_max'].apply(float)
     #df['temperature_min'] = df['temperature_min'].apply(float)
     #df['uv_index_max'] = df['uv_index_max'].apply(float)
