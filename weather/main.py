@@ -9,7 +9,8 @@ import pandas as pd
 import random
 import time
 import os
-
+pd.set_option('display.max_columns', None)
+pd.set_option('display.max_rows', None)
 
 # Create an Application
 app = Application.Quix(consumer_group="csv_sample", auto_create_topics=True)
