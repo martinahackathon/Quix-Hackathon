@@ -39,6 +39,7 @@ def read_csv_file(file_path: str):
     df = pd.read_csv(file_path)
     print("File loaded.")
     df = df.rename(columns={'time': 'Timestamp'})
+    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
     df['Timestamp'] = (df['Timestamp'].astype('int64')) // 10**9
     print(df)
     # Get the number of rows in the dataFrame for printing out later
